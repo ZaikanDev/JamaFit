@@ -1,0 +1,142 @@
+:root {
+  --jama-green: #2b5345; /* primario */
+  --jama-beige: #ece3d0; /* fondo claro */
+  --jama-orange: #ee672e; /* acento */
+  --jama-dark: #0b1a15; /* apoyo */
+}
+
+body {
+  background: #0d0f12;
+  color: #f4f4f4;
+}
+.navbar {
+  background: rgba(11, 26, 21, 0.65);
+  backdrop-filter: blur(6px);
+}
+.navbar .navbar-brand {
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: var(--jama-beige);
+}
+.navbar .nav-link {
+  color: #dfe7e3;
+}
+.navbar .nav-link:hover {
+  color: var(--jama-orange);
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 78vh;
+  display: grid;
+  place-items: center;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(11, 26, 21, 0.75),
+    rgba(11, 26, 21, 0.6) 35%,
+    rgba(13, 15, 18, 0.95)
+  );
+  z-index: 1;
+}
+.hero video,
+.hero .bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.9) contrast(1.05);
+}
+.hero .content {
+  position: relative;
+  z-index: 2;
+  max-width: 920px;
+  text-align: center;
+  padding: 2rem;
+}
+.badge-jama {
+  background: var(--jama-orange);
+  color: #fff;
+}
+.btn-jama {
+  background: var(--jama-orange);
+  color: #fff;
+  border: none;
+}
+.btn-jama:hover {
+  background: #d65824;
+  color: #fff;
+}
+
+/* Grid estilo “tendencias” */
+.tray-title {
+  font-weight: 700;
+  color: var(--jama-beige);
+}
+.card-food {
+  background: #121519;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+.card-food img {
+  transition: transform 0.3s ease;
+}
+.card-food:hover img {
+  transform: scale(1.05);
+}
+
+/* Motivos */
+.reasons .icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(238, 103, 46, 0.12);
+  display: grid;
+  place-items: center;
+  color: var(--jama-orange);
+}
+
+/* FAQ */
+.accordion-button {
+  background: #0f1317;
+  color: #dfe7e3;
+}
+.accordion-item {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+.accordion-button:not(.collapsed) {
+  color: #fff;
+  background: #141a1f;
+}
+
+/* CTA y Footer */
+.cta {
+  background: linear-gradient(90deg, var(--jama-green), #1c3b31);
+}
+footer {
+  background: #0b1310;
+  color: #bcd1c8;
+}
+footer a {
+  color: #bcd1c8;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #fff;
+}
+
+/* Email input */
+.email-input {
+  background: #0f1513;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #e9f2ee;
+}
+.email-input::placeholder {
+  color: #9eb6ad;
+}
